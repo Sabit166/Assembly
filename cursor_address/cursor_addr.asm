@@ -1,6 +1,6 @@
 ;=======================================================================
 ; Title: Device Communication using MDA-style Port I/O on 8086
-; Author: [Your Name]
+; Author: [Sabit]
 ; Purpose: Demonstrates output to device using port-mapped I/O
 ;=======================================================================
 

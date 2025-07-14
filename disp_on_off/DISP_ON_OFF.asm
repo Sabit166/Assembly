@@ -1,7 +1,7 @@
 ;======================================================================
 ; Title  : MDA-8086 Output Program
 ; Purpose: Send string "MIST" to an I/O device via port-mapped I/O
-; Author : [Your Name]
+; Author : [Sabit]
 ;======================================================================
 
 CODE SEGMENT
