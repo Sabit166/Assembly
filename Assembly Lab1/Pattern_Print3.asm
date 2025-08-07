@@ -1,3 +1,10 @@
+; 1
+; 1 2
+; 1 2 3
+; 1 2 3 4
+; 1 2 3 4 5
+
+
 .MODEL SMALL
 .STACK 100H
 .DATA
@@ -42,7 +49,6 @@ L1: PUSH CX           ; save total rows
     LOOP L2
 
     ; New line
-    ;MOV AH, 02
     MOV DX, 0Dh
     INT 21h
     MOV DX, 0Ah
@@ -52,8 +58,5 @@ L1: PUSH CX           ; save total rows
     INC BX
     LOOP L1
 
-    ; Exit
-    MOV AH, 4Ch
-    INT 21h
 MAIN ENDP
 END MAIN
