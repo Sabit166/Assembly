@@ -1,0 +1,37 @@
+.MODEL SMALL
+.STACK 100H
+.DATA
+    A   DB  ?
+    EQ  DB 'Equal$'
+    NEQ DB 'Not Equal$'
+.CODE
+MAIN PROC
+    MOV AX, @DATA
+    MOV DS, AX
+
+    MOV AH, 01
+    INT 21H
+    MOV A, AL
+
+    MOV AH, 01
+    INT 21H
+
+    CMP A, AL
+    JZ EQUAL
+
+NOTEQUAL:
+    MOV AH, 09
+    LEA DX, NEQ
+    INT 21H
+    JMP EXIT
+
+EQUAL:
+    MOV AH, 09
+    LEA DX, EQ
+    INT 21H
+
+EXIT:
+    MOV AH, 4CH
+    INT 21H
+MAIN ENDP
+END MAIN
